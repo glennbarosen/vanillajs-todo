@@ -1,5 +1,5 @@
 # JS todolist
-> 🖍 Very minimal todolist made with vanilla JavaScript.
+> 🖍  Very minimal todolist made with vanilla JavaScript.
 
 Just a basic project to learn the basics of JS since I started learning ReactJS first.
 

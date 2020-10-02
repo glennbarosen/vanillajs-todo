@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    display: grid;
+    place-items: center;
+}
+
+header {
+    margin: 0 0 50px 0;
+    height: 15vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(249,84,95,1) 0%, rgba(255,255,255,1) 100%);
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+.todo-form {
+    display: grid;
+    place-items: center;
+}
+
+.todo-input {
+    width: 30vw;
+    height: 2.5rem;
+    margin: 20px;
+    padding-left: 30px;
+    border-radius: 30px;
+    border: 1px solid black;
+
+}
+
+.todo-input:focus {
+    outline: none;
+}
+
+.submit-btn {
+    width: 10vw;
+    height: 3rem;
+    background: rgb(249, 84, 95);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.75);
+}
+
+.submit-btn:hover {
+    background: white;
+    color: rgb(249, 84, 95);
+    border: 1px solid rgb(249, 84, 95);
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+ /* Change color of bullet in list. From W3Schools */
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "📌";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(249, 84, 95); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+.submit-btn:focus {
+    outline: none;
+}
+
+.todo-container {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.todos {
+    min-width: 30vw;
+}
+
+.todo-element {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item {
+    max-width: 70vw;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+}
+
+.todo-item-done {
+    max-width: 70vw;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+.todo-item:hover {
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+footer {
+    bottom: 1px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 5rem;
+}
+
+a {
+    text-decoration: dotted;
+    color: rgb(249, 84, 95);
+}

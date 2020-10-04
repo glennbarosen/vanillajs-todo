@@ -6,37 +6,37 @@
 
 body {
     font-family: 'Comfortaa', cursive;
+    min-height: 100%;
     display: grid;
-    place-items: center;
+    grid-template-rows: 20vh auto 20vh;
 }
 
 header {
-    margin: 0 0 50px 0;
-    height: 15vh;
-    width: 100%;
     background-image: linear-gradient(180deg, rgba(249,84,95,1) 0%, rgba(255,255,255,1) 100%);
     display: grid;
     place-items: center;
+    width: 100vw;
 }
 
 main {
-    display: grid;
-    place-items: center;
+    min-height: 60vh;
+    padding: 1.5rem;
 }
 
 .todo-form {
     display: grid;
     place-items: center;
+    padding: 3rem;
 }
 
 .todo-input {
     width: 30vw;
     height: 2.5rem;
-    margin: 20px;
-    padding-left: 30px;
+    margin-bottom: 1rem;
+    padding: 1rem;
     border-radius: 30px;
     border: 1px solid black;
-
+    font-size: 1.2rem;
 }
 
 .todo-input:focus {
@@ -44,10 +44,11 @@ main {
 }
 
 .submit-btn {
-    width: 10vw;
+    width: 200px;
     height: 3rem;
     background: rgb(249, 84, 95);
     color: white;
+    font-size: 1.2rem;
     border: none;
     border-radius: 30px;
     -webkit-box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.75);
@@ -59,48 +60,33 @@ main {
     background: white;
     color: rgb(249, 84, 95);
     border: 1px solid rgb(249, 84, 95);
-    transition: 0.3s;
+    transition: 0.4s ease-out;
     font-weight: 700;
 }
 
- /* Change color of bullet in list. From W3Schools */
-ul {
-    list-style: none; /* Remove default bullets */
-  }
-  
-  ul li::before {
-    content: "📌";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: rgb(249, 84, 95); /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 2em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-  }
 .submit-btn:focus {
     outline: none;
 }
 
 .todo-container {
-    margin: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .todos {
-    min-width: 30vw;
+    min-width: 50vw;
 }
 
 .todo-element {
-    margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .todo-item {
-    max-width: 70vw;
     word-wrap: break-word;
     font-size: 1.2rem;
 }
@@ -132,14 +118,36 @@ ul {
 }
 
 footer {
-    bottom: 1px;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    padding: 5rem;
+    background-image: linear-gradient(360deg, rgba(249,84,95,1) 0%, rgba(255,255,255,1) 100%);
+    text-align: center;
+    padding: 3rem;
 }
 
 a {
     text-decoration: dotted;
     color: rgb(249, 84, 95);
+}
+
+/* Change color of bullet in list. From W3Schools */
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "📌";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(249, 84, 95); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+@media only screen and (max-width: 740px) {
+    .submit-btn {
+        width: 50vw;
+    }
+
+    .todo-input {
+        width: 50vw;
+    }
 }

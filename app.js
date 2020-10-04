@@ -1,4 +1,3 @@
-
 const todoInput = document.querySelector(".todo-input")
 const submitButton = document.querySelector(".submit-btn")
 const todos = document.querySelector(".todos")
@@ -10,7 +9,6 @@ todos.addEventListener('click', toggleDone)
 
 function addTodo(e) {
     e.preventDefault()
-    console.log('submitted')
 
     const todoDiv = document.createElement('div')
     todoDiv.classList.add('todo-element')
@@ -20,7 +18,6 @@ function addTodo(e) {
     todoItem.innerText = todoInput.value
     todoDiv.appendChild(todoItem)
 
-
     const deleteTodo = document.createElement('button')
     deleteTodo.classList.add('delete-btn')
     deleteTodo.innerText = '💣'
@@ -28,6 +25,7 @@ function addTodo(e) {
 
     todos.appendChild(todoDiv)
 
+    console.log('submitted')
     todoInput.value = ''
 }
 
@@ -36,7 +34,6 @@ function deleteTodo(e) {
         e.target.parentElement.remove()
         console.log('deleted')
     }
-
 }
 
 function toggleDone(e) {
@@ -44,5 +41,4 @@ function toggleDone(e) {
         e.target.className = 'todo-item-done'
     else if (e.target.className === 'todo-item-done')
         e.target.className = 'todo-item'
-
 }
